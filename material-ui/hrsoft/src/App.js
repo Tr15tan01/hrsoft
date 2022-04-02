@@ -72,7 +72,7 @@ class App extends React.Component {
             <Route path="/newitem" element={<NewItemPage currentUser={this.state.currentUser} />} />
             <Route path="/employees" element={!this.state.currentUser ? (<Navigate to="/signin" />) : (<EmployeesPage currentUser={this.state.currentUser} testValue="test value" />)} />
             <Route path="/employee" element={!this.state.currentUser ? (<Navigate to="/signin" />) : (<EmployeePage currentUser={this.state.currentUser} testValue="test value" />)} />
-            <Route path="/employee:id" element={!this.state.currentUser ? (<Navigate to="/signin" />) : (<EmployeePage currentUser={this.state.currentUser} testValue="test value" />)} />
+            {/* <Route path="/employee:id" element={!this.state.currentUser ? (<Navigate to="/signin" />) : (<EmployeePage currentUser={this.state.currentUser} testValue="test value" />)} /> */}
             {/* <Route path="/employee" element={<EmployeePage currentUser={this.state.currentUser} testValue="test value" />} /> */}
             {/* <Route path="/employee" element={<EmployeePage currentUser={this.state.currentUser} testValue="test value" />} /> */}
           </Routes>

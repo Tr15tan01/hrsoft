@@ -16,6 +16,9 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
+//local impoert
+import ListComponent from './List';
+
 import { auth } from '../utils/firebase';
 
 const Search = styled('div')(({ theme }) => ({
@@ -61,6 +64,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 export default function TopBar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [showMenu, setShowMenu] = React.useState(false)
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -86,6 +90,11 @@ export default function TopBar() {
     handleMenuClose()
     auth.signOut()
     console.log('signed out')
+  }
+
+  const handleMenuOpen = () => {
+    console.log('menu opened')
+    setShowMenu(!showMenu)
   }
 
   const menuId = 'primary-search-account-menu';
@@ -172,7 +181,8 @@ export default function TopBar() {
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            sx={{ mr: 2, display: { md: 'none', sx: 'block' } }}
+            onClick={handleMenuOpen}
           >
             <MenuIcon />
           </IconButton>
@@ -237,6 +247,10 @@ export default function TopBar() {
       </AppBar>
       {renderMobileMenu}
       {renderMenu}
+      <Box sx={{ width: "90%", m: 0, p: 0, zIndex: '4', position: 'absolute' }}>
+        {showMenu ? <ListComponent /> : null}
+      </Box>
     </Box>
+
   );
 }

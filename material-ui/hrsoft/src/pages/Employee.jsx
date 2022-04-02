@@ -67,10 +67,10 @@ function EmployeePage(props) {
             </Container>
             <Container maxWidth="xl" sx={{ bgcolor: 'whitesmoke', height: "100vh", color: "primary", display: "flex", flexDirection: "row", p: 0, m: 0 }}>
 
-                <Box sx={{ width: "300px", m: 0, p: 0 }}>
+                <Box sx={{ width: "30%", m: 0, p: 0, display: { xs: 'none', md: 'block' } }}>
                     <ListComponent />
                 </Box>
-                <Container maxWidth="lg" sx={{ height: "100vh", color: "primary" }}>
+                <Container maxWidth="lg" sx={{ height: "100vh", width: { md: '70%', xs: '100%' }, color: "primary" }}>
                     <Box sx={{ flexGrow: 1, mt: 1, ml: 0 }}>
                         <Paper variant="outlined" sx={{
                             overflow: 'hidden',

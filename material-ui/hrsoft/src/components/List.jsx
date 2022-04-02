@@ -25,7 +25,7 @@ const ListComponent = () => {
                             <ListItemText primary="HomePage" />
                         </ListItemButton>
                     </ListItem></Link>
-                    <Link to="/"><ListItem disablePadding>
+                    <Link to="/mainpage"><ListItem disablePadding>
                         <ListItemButton>
                             <ListItemIcon>
                                 <DraftsIcon />
@@ -58,14 +58,16 @@ const ListComponent = () => {
                             <ListItemText primary="New Item" />
                         </ListItemButton>
                     </ListItem></Link>
-                    <ListItem disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                <DraftsIcon />
-                            </ListItemIcon>
-                            <ListItemText primary="Drafts" />
-                        </ListItemButton>
-                    </ListItem>
+                    <Link to="/mainpage">
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <DraftsIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Drafts" />
+                            </ListItemButton>
+                        </ListItem>
+                    </Link>
                 </List>
             </nav>
             <Divider />
