@@ -53,11 +53,11 @@ function EmployeePage(props) {
                 console.log(error)
             });
     }
+    const url = location.state.imageUrl
+    checkImage(url)
 
-    // checkImage()
 
-
-
+    console.log('image is - ', location.state.imageUrl)
     return (
         <div className="App">
             <CssBaseline />
@@ -86,7 +86,8 @@ function EmployeePage(props) {
                                     // maxWidth: { xs: 350, md: 250 },
                                 }}
                                 alt="The house from the offer."
-                                src={personUrl}
+                                // src={personUrl}
+                                src={image}
                             />
                         </Paper>
                         <Grid container spacing={3}>

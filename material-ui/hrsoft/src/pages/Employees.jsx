@@ -80,7 +80,7 @@ function EmployeesPage(props) {
                                             {item.name} - Age is - {item.age} - photo - {item.photo}
                                         </Typography>
                                         {' — Do you have Paris recommendations? Have you ever…'}
-                                        <Link to='/employee' state={{ name: item.name }}>Test Llink</Link>
+                                        <Link to='/employee' state={{ name: item.name, imageUrl: item.photo }}>Test Llink</Link>
                                     </React.Fragment>
                                 }
                             />

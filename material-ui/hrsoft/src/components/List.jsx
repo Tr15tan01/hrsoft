@@ -58,13 +58,13 @@ const ListComponent = () => {
                             <ListItemText primary="New Item" />
                         </ListItemButton>
                     </ListItem></Link>
-                    <Link to="/mainpage">
+                    <Link to="/charts">
                         <ListItem disablePadding>
                             <ListItemButton>
                                 <ListItemIcon>
                                     <DraftsIcon />
                                 </ListItemIcon>
-                                <ListItemText primary="Drafts" />
+                                <ListItemText primary="Charts" />
                             </ListItemButton>
                         </ListItem>
                     </Link>

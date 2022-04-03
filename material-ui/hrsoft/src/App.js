@@ -17,6 +17,7 @@ import EmployeePage from './pages/Employee'
 import EmployeesPage from './pages/Employees'
 import PricingPage from './pages/PricingPage'
 // import TestPage from './pages/TestPage'
+import PageNotFound from './pages/PageNotFound';
 
 import './App.css';
 import { auth, createUserProfileDocument } from './utils/firebase'
@@ -75,6 +76,7 @@ class App extends React.Component {
             {/* <Route path="/employee:id" element={!this.state.currentUser ? (<Navigate to="/signin" />) : (<EmployeePage currentUser={this.state.currentUser} testValue="test value" />)} /> */}
             {/* <Route path="/employee" element={<EmployeePage currentUser={this.state.currentUser} testValue="test value" />} /> */}
             {/* <Route path="/employee" element={<EmployeePage currentUser={this.state.currentUser} testValue="test value" />} /> */}
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
         </BrowserRouter >
       </div >
